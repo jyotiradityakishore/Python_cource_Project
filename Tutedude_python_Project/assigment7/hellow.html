@@ -1,0 +1,13 @@
+{% extends 'background.html' %}
+
+{% block content %}
+
+<h1> hellow {{name}} </h1>
+<form action = "/add" method="post">
+    {% csrf_token %}
+    Enter your first number  : <input type="text" name = "number1"><br>
+    Enter your second number: <input type="text" name = "number2"><br>
+<input type = "submit">
+</form>
+
+{% endblock %}
